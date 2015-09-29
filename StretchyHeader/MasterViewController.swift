@@ -30,6 +30,8 @@ class MasterViewController: UITableViewController {
         	["category":"Europe", "headline":"'One million babies' created by EU student exchanges"]
         ]
         
+        
+        // Makes cells auto-sizing as long as constraints are in place.
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 100
         
