@@ -14,6 +14,7 @@
 		12513F0F1BBB07E300222F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12513F0E1BBB07E300222F87 /* Assets.xcassets */; };
 		12513F121BBB07E300222F87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12513F101BBB07E300222F87 /* LaunchScreen.storyboard */; };
 		12513F1D1BBB07E400222F87 /* StretchyHeaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12513F1C1BBB07E400222F87 /* StretchyHeaderTests.swift */; };
+		12D5096F1BBB095A005FC9B8 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D5096E1BBB095A005FC9B8 /* NewsCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		12513F181BBB07E400222F87 /* StretchyHeaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StretchyHeaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12513F1C1BBB07E400222F87 /* StretchyHeaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderTests.swift; sourceTree = "<group>"; };
 		12513F1E1BBB07E400222F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12D5096E1BBB095A005FC9B8 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				12513F051BBB07E300222F87 /* AppDelegate.swift */,
 				12513F071BBB07E300222F87 /* MasterViewController.swift */,
 				12513F091BBB07E300222F87 /* DetailViewController.swift */,
+				12D5096E1BBB095A005FC9B8 /* NewsCell.swift */,
 				12513F0B1BBB07E300222F87 /* Main.storyboard */,
 				12513F0E1BBB07E300222F87 /* Assets.xcassets */,
 				12513F101BBB07E300222F87 /* LaunchScreen.storyboard */,
@@ -201,6 +204,7 @@
 			files = (
 				12513F0A1BBB07E300222F87 /* DetailViewController.swift in Sources */,
 				12513F081BBB07E300222F87 /* MasterViewController.swift in Sources */,
+				12D5096F1BBB095A005FC9B8 /* NewsCell.swift in Sources */,
 				12513F061BBB07E300222F87 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +395,7 @@
 				12513F231BBB07E400222F87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		12513F241BBB07E400222F87 /* Build configuration list for PBXNativeTarget "StretchyHeaderTests" */ = {
 			isa = XCConfigurationList;
@@ -399,6 +404,7 @@
 				12513F261BBB07E400222F87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
