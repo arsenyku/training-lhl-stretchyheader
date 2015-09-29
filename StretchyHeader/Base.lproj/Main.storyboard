@@ -80,7 +80,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="a3K-yj-5kP" customClass="NewsCell" customModule="StretchyHeader" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="100" id="a3K-yj-5kP" customClass="NewsCell" customModule="StretchyHeader" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a3K-yj-5kP" id="Whe-1R-dWz">
@@ -93,21 +93,26 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyE-pC-Jen" userLabel="Headline">
-                                            <rect key="frame" x="18" y="39" width="574" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyE-pC-Jen" userLabel="Headline">
+                                            <rect key="frame" x="18" y="39" width="574" height="52"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="SyE-pC-Jen" firstAttribute="top" secondItem="kwP-5E-2Hw" secondAttribute="bottom" constant="10" id="B1h-R7-B7a"/>
                                         <constraint firstItem="SyE-pC-Jen" firstAttribute="leading" secondItem="kwP-5E-2Hw" secondAttribute="leading" constant="10" id="G7q-zD-PdE"/>
+                                        <constraint firstItem="SyE-pC-Jen" firstAttribute="top" secondItem="kwP-5E-2Hw" secondAttribute="bottom" constant="10" id="YS6-Qj-4xg"/>
                                         <constraint firstItem="kwP-5E-2Hw" firstAttribute="top" secondItem="Whe-1R-dWz" secondAttribute="topMargin" id="Yq4-Vc-rMS"/>
                                         <constraint firstItem="SyE-pC-Jen" firstAttribute="trailing" secondItem="Whe-1R-dWz" secondAttribute="trailingMargin" id="eka-ha-eB5"/>
+                                        <constraint firstItem="SyE-pC-Jen" firstAttribute="bottom" secondItem="Whe-1R-dWz" secondAttribute="bottomMargin" id="ftq-9g-Sni"/>
                                         <constraint firstItem="kwP-5E-2Hw" firstAttribute="leading" secondItem="Whe-1R-dWz" secondAttribute="leadingMargin" id="qpX-br-KSn"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="kwP-5E-2Hw" id="fiX-Ej-NyK"/>
+                                    <outlet property="headlineLabel" destination="SyE-pC-Jen" id="jK8-SH-EBr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>

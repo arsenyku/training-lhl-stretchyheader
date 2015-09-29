@@ -13,11 +13,25 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
 
-
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var headlineLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
+        self.objects = [
+            ["category":"World", "headline":"Climate change protests, divestments meet fossil fuels realities"],
+        	["category":"Europe", "headline":"Scotland's 'Yes' leader says independence vote is 'once in a lifetime'"],
+        	["category":"Middle East", "headline":"Airstrikes boost Islamic State, FBI director warns more hostages possible"],
+	        ["category":"Africa", "headline":"Nigeria says 70 dead in building collapse; questions S. Africa victim claim"],
+        	["category":"Asia Pacific", "headline":"Despite UN ruling, Japan seeks backing for whale hunting"],
+        	["category":"Americas", "headline":"Officials: FBI is tracking 100 Americans who fought alongside IS in Syria"],
+        	["category":"World", "headline":"South Africa in $40 billion deal for Russian nuclear reactors"],
+        	["category":"Europe", "headline":"'One million babies' created by EU student exchanges"]
+        ]
+        
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 100
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
@@ -33,7 +47,13 @@ class MasterViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
         super.viewWillAppear(animated)
-        
+
+        self.navigationController?.navigationBarHidden = true;
+
+    }
+    
+    override func viewWillDisappear(animated: Bool) { // Called when the view is dismissed, covered or otherwise hidden. Default does nothing
+        self.navigationController?.navigationBarHidden = false;
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,10 +92,12 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("newsCell", forIndexPath: indexPath)
 
-        let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
+        let newsCell = cell as! NewsCell
+        
+        let object = objects[indexPath.row] as! Dictionary<String, String>
+        newsCell.setNews(news:object);
         return cell
     }
 
@@ -92,7 +114,6 @@ class MasterViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
 
 }
 
