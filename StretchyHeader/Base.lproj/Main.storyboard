@@ -79,9 +79,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="naM-R5-DM5" userLabel="Header">
+                            <rect key="frame" x="0.0" y="64" width="600" height="151"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-header" translatesAutoresizingMaskIntoConstraints="NO" id="XiJ-YY-SFb">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="151"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE3-BT-MqF" userLabel="Date">
+                                    <rect key="frame" x="8" y="8" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="OE3-BT-MqF" firstAttribute="top" secondItem="naM-R5-DM5" secondAttribute="topMargin" id="C8D-4c-V88"/>
+                                <constraint firstItem="XiJ-YY-SFb" firstAttribute="leading" secondItem="naM-R5-DM5" secondAttribute="leading" id="LO2-0N-LcX"/>
+                                <constraint firstItem="OE3-BT-MqF" firstAttribute="leading" secondItem="naM-R5-DM5" secondAttribute="leadingMargin" id="SG8-9a-fAF"/>
+                                <constraint firstItem="XiJ-YY-SFb" firstAttribute="top" secondItem="naM-R5-DM5" secondAttribute="top" id="Z3j-9G-82E"/>
+                                <constraint firstAttribute="bottom" secondItem="XiJ-YY-SFb" secondAttribute="bottom" id="dEl-pB-Wev"/>
+                                <constraint firstAttribute="trailing" secondItem="XiJ-YY-SFb" secondAttribute="trailing" id="riE-kv-tPn"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="100" id="a3K-yj-5kP" customClass="NewsCell" customModule="StretchyHeader" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="237" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a3K-yj-5kP" id="Whe-1R-dWz">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
@@ -122,6 +146,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <connections>
+                        <outlet property="headerDateLabel" destination="OE3-BT-MqF" id="Qad-rU-7qf"/>
+                        <outlet property="headerImageView" destination="XiJ-YY-SFb" id="yI8-8p-QNn"/>
+                        <outlet property="headerView" destination="naM-R5-DM5" id="Vbe-vj-53l"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
@@ -143,4 +172,7 @@
             <point key="canvasLocation" x="-45" y="129"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg-header" width="621" height="412"/>
+    </resources>
 </document>

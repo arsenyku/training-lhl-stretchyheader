@@ -13,8 +13,11 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
 
-    @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var headlineLabel: UILabel!
+    @IBOutlet weak var headerImageView: UIImageView!
+    @IBOutlet weak var headerDateLabel: UILabel!
+    @IBOutlet weak var headerView: UIView!
+
+    let kTableViewHeaderHeight:CGFloat = 300.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +33,15 @@ class MasterViewController: UITableViewController {
         	["category":"Europe", "headline":"'One million babies' created by EU student exchanges"]
         ]
         
-        
         // Makes cells auto-sizing as long as constraints are in place.
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 100
+        
+        self.tableView.tableHeaderView = nil;
+        self.tableView.addSubview(self.headerView)
+
+        self.headerDateLabel.text = NSDate().dateStringWithFormat("MMMM dd")
+        self.headerDateLabel.textColor = UIColor.whiteColor()
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
@@ -43,6 +51,17 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        
+//        self.tableView.contentInset = UIEdgeInsets(top: kTableViewHeaderHeight, left: 0, bottom: 0, right: 0)
+//        self.tableView.contentOffset = CGPointMake(0, -kTableViewHeaderHeight)
+        
+        
+//        self.tableView.contentOffset = CGPointMake(0, 1000)
+//        self.tableView.contentInset = UIEdgeInsetsMake(self.headerImageView.frame.size.height, 0, 0, 0)
+//        self.headerView.frame = CGRect(x: 0, y:-self.headerImageView.frame.size.height,
+//            width: self.headerView.frame.size.width, height:self.headerView.frame.size.height)
+        
         
     }
 
