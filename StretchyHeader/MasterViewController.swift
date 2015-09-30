@@ -52,15 +52,7 @@ class MasterViewController: UITableViewController {
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
         
-        
-//        self.tableView.contentInset = UIEdgeInsets(top: kTableViewHeaderHeight, left: 0, bottom: 0, right: 0)
-//        self.tableView.contentOffset = CGPointMake(0, -kTableViewHeaderHeight)
-        
-        
-//        self.tableView.contentOffset = CGPointMake(0, 1000)
-//        self.tableView.contentInset = UIEdgeInsetsMake(self.headerImageView.frame.size.height, 0, 0, 0)
-//        self.headerView.frame = CGRect(x: 0, y:-self.headerImageView.frame.size.height,
-//            width: self.headerView.frame.size.width, height:self.headerView.frame.size.height)
+        updateHeaderView()
         
         
     }
@@ -102,6 +94,12 @@ class MasterViewController: UITableViewController {
         }
     }
 
+    // MARK: - Scroll View Delebgate
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+		updateHeaderView()
+    }
+    
     // MARK: - Table View
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -136,5 +134,13 @@ class MasterViewController: UITableViewController {
         }
     }
 
+    // MARK: - Private
+
+    func updateHeaderView() {
+        self.tableView.contentInset = UIEdgeInsets(top: kTableViewHeaderHeight, left: 0, bottom: 0, right: 0)
+        self.headerView.frame = CGRect(x: 0, y:-kTableViewHeaderHeight,
+            width: self.headerView.frame.size.width, height:self.headerView.frame.size.height)
+    }
+    
 }
 
