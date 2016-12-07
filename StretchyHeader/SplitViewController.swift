@@ -10,7 +10,7 @@ import UIKit
 
 class SplitViewController: UISplitViewController{
     
-        override func prefersStatusBarHidden() -> Bool {
+    override func prefersStatusBarHidden() -> Bool {
         return true;
     }
     
