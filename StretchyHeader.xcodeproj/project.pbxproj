@@ -14,12 +14,12 @@
 		12513F0F1BBB07E300222F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12513F0E1BBB07E300222F87 /* Assets.xcassets */; };
 		12513F121BBB07E300222F87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12513F101BBB07E300222F87 /* LaunchScreen.storyboard */; };
 		12513F1D1BBB07E400222F87 /* StretchyHeaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12513F1C1BBB07E400222F87 /* StretchyHeaderTests.swift */; };
-		12D5096F1BBB095A005FC9B8 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D5096E1BBB095A005FC9B8 /* NewsCell.swift */; settings = {ASSET_TAGS = (); }; };
-		12D509731BBB1EAB005FC9B8 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D509721BBB1EAB005FC9B8 /* SplitViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		12D509771BBB3579005FC9B8 /* Floating-Heads.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D509741BBB3579005FC9B8 /* Floating-Heads.xcassets */; settings = {ASSET_TAGS = (); }; };
-		12D509781BBB3579005FC9B8 /* Stretchy-Header.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D509751BBB3579005FC9B8 /* Stretchy-Header.xcassets */; settings = {ASSET_TAGS = (); }; };
-		12D509791BBB3579005FC9B8 /* Zooming-Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D509761BBB3579005FC9B8 /* Zooming-Icons.xcassets */; settings = {ASSET_TAGS = (); }; };
-		12D5097D1BBB380D005FC9B8 /* NSDate+FormattedDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D5097B1BBB380D005FC9B8 /* NSDate+FormattedDate.m */; settings = {ASSET_TAGS = (); }; };
+		12D5096F1BBB095A005FC9B8 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D5096E1BBB095A005FC9B8 /* NewsCell.swift */; };
+		12D509731BBB1EAB005FC9B8 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D509721BBB1EAB005FC9B8 /* SplitViewController.swift */; };
+		12D509771BBB3579005FC9B8 /* Floating-Heads.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D509741BBB3579005FC9B8 /* Floating-Heads.xcassets */; };
+		12D509781BBB3579005FC9B8 /* Stretchy-Header.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D509751BBB3579005FC9B8 /* Stretchy-Header.xcassets */; };
+		12D509791BBB3579005FC9B8 /* Zooming-Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D509761BBB3579005FC9B8 /* Zooming-Icons.xcassets */; };
+		12D5097D1BBB380D005FC9B8 /* NSDate+FormattedDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D5097B1BBB380D005FC9B8 /* NSDate+FormattedDate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,9 +171,11 @@
 				TargetAttributes = {
 					12513F011BBB07E300222F87 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0810;
 					};
 					12513F171BBB07E400222F87 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0810;
 						TestTargetID = 12513F011BBB07E300222F87;
 					};
 				};
@@ -366,6 +368,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "StretchyHeader-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -379,6 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = training.asu.StretchyHeader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "StretchyHeader-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -390,6 +394,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = training.asu.StretchyHeaderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StretchyHeader.app/StretchyHeader";
 			};
 			name = Debug;
@@ -402,6 +407,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = training.asu.StretchyHeaderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StretchyHeader.app/StretchyHeader";
 			};
 			name = Release;
