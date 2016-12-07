@@ -23,7 +23,7 @@ class NewsCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
     
-    internal func setNews(news news: Dictionary<String, String>){
+    internal func setNews(news: Dictionary<String, String>){
     	self.category = news["category"] as String!
         self.headline = news["headline"] as String!
 
@@ -37,20 +37,20 @@ class NewsCell: UITableViewCell {
         
         switch self.category {
         case "World":
-            self.categoryLabel.textColor = UIColor.redColor()
+            self.categoryLabel.textColor = UIColor.red
         case "Americas":
-            self.categoryLabel.textColor = UIColor.blueColor()
+            self.categoryLabel.textColor = UIColor.blue
         case "Europe":
-            self.categoryLabel.textColor = UIColor.orangeColor()
+            self.categoryLabel.textColor = UIColor.orange
         case "Middle East":
-            self.categoryLabel.textColor = UIColor.greenColor()
+            self.categoryLabel.textColor = UIColor.green
         case "Africa":
-            self.categoryLabel.textColor = UIColor.grayColor()
+            self.categoryLabel.textColor = UIColor.gray
         case "Asia Pacific":
-            self.categoryLabel.textColor = UIColor.purpleColor()
+            self.categoryLabel.textColor = UIColor.purple
 
         default:
-            self.categoryLabel.textColor = UIColor.blackColor()
+            self.categoryLabel.textColor = UIColor.black
         }
         
     }
